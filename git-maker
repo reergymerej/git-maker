@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# bail if something falls over
+set -e
+
+NAME="$1.git"
+DESTINATION="/opt/git"
+cd $DESTINATION
+
+# create the repo
+git init --bare --shared --quiet $NAME
+
+# give some useful feedback
+REPO_PATH="git@24.129.24.173:$DESTINATION/$NAME"
+echo "$REPO_PATH"
