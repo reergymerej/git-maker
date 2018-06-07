@@ -10,5 +10,6 @@ cd $DESTINATION
 git init --bare --shared --quiet $NAME
 
 # give some useful feedback
-REPO_PATH="git@24.129.24.173:$DESTINATION/$NAME"
+SERVER="eggbasket"
+REPO_PATH="git@$SERVER:$DESTINATION/$NAME"
 echo "$REPO_PATH"
